@@ -1,5 +1,5 @@
 import preprocess from 'svelte-preprocess'
-import adapter from '@sveltejs/adapter-node'
+import adapter from '@sveltejs/adapter-vercel'
 import { aliases } from '../../aliases.js'
 import { dirname, join } from 'path'
 import { fileURLToPath } from 'url'
@@ -218,7 +218,7 @@ const config = {
   },
 
   kit: {
-    adapter: adapter({ out: 'build' }),
+    adapter: adapter(),
     alias: aliases(),
     env: {
       dir: process.cwd()
